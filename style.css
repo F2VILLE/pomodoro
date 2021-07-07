@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Oxygen&display=swap');
+
+:root {
+    --bg: #400C24;
+    --bg-dark: #260A15;
+    --bg-fade: #591C38;
+    --color: #F2CA7E;
+    --color-fade: #F2D7B6;
+    --button: #73D2FA;
+    --font: 'Noto Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--color);
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    height: 100vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#state {
+    margin-top: -25vh;
+    font-size: 35px;
+    border-bottom: var(--color-fade) solid 2px;
+    padding-bottom: 5px;
+}
+
+.time-input {
+    margin-top: 2vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-tinp {
+    position: relative;
+}
+
+.time-input h1 {
+    font-size: 150px;
+}
+
+.select-autorestart {
+    margin-top: 2vh;
+    color: var(--color-fade);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.select-autorestart input {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+}
+button {
+    margin-top: 35px;
+    background-color: var(--bg-fade);
+    border: none;
+    padding: 10px 20px;
+    color: var(--color-fade);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: var(--bg-dark);
+}
+
+.settings {
+    position: absolute;
+    z-index: 2;
+    bottom: 15vh;
+}
+
+.settings i {
+    cursor: pointer;
+    font-size: 75px;
+    transition: transform .3s ease-out;
+}
+
+.settings i:hover {
+    transform: rotateZ(180deg) scale(1.5);
+}
+
+.settings-menu {
+    position: absolute;
+    z-index: 1;
+    width: max(400px, 90vw);
+    height: max(400px, 80vh);
+    background-color: var(--bg-fade);
+    box-shadow: #000 0 0 150px;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.set-title {
+    margin-top: 5vh;
+    font-size: 50px;
+    border-bottom: var(--color-fade) solid 2px;
+    padding-bottom: 5px;
+}
+
+.set-cat {
+    margin-top: 10vh;
+}
+
+.set-cat input {
+    background-color: rgba(255, 255, 255, 0.473);
+    color: var(--bg);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    width: 35px;
+    padding: 5px;
+    margin: 1vh 0;
+}
+
+.set-inp-ctn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.set-inp-ctn p {
+    margin-left: 10px;
+    font-size: 30px;
+}
